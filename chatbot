@@ -1,0 +1,27 @@
+print("Welcome to Simple ChatBot!")
+print("Type 'bye' to exit.\n")
+
+while True:
+    user_input = input("You: ").lower()
+
+    if "hello" in user_input or "hi" in user_input:
+        print("Bot: Hello! How can I help you?")
+    elif "how are you" in user_input:
+        print("Bot: I'm just a bot, but I'm doing great!")
+    elif "how is your day" in user_input:
+        print("Bot:Thanks for asking!As your AI assistant, I’m always ready and focused—24/7, no coffee needed .How’s your day going so far?")
+    elif "great" in user_input:
+        print("Thats great,happy to hear")
+    elif "bad" in user_input:
+        print("ohh,ok no problem ,lets make your day good ,by building a better and positive conversation to make you feel good")
+    elif "what is your job" in user_input:
+            print("Bot:My job is to make you satisfy with your queries")
+    elif "your name" in user_input:
+        print("Bot: I'm a simple chatbot created by you!")
+    elif "today weather report" in user_input or "weather" in user_input:
+        print("Bot:currently 102°,cloudy ,its a warm and cloudy evening ♡")
+    elif "bye" in user_input:
+        print("Bot: Goodbye! Have a great day!")
+        break
+    else:
+        print("Bot: Sorry, I didn't understand that.")
