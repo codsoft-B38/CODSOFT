@@ -1,0 +1,17 @@
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+# Load model
+model = ResNet50(weights='imagenet', include_top=False, pooling='avg')
+
+# Load and preprocess image
+def extract_features(img_path):
+    img = image.load_img(img_path, target_size=(224, 224))
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+    feature = model.predict(x)
+    return feature
+
+# Assume feature vector is now fed into a trained LSTM model to generate captions
